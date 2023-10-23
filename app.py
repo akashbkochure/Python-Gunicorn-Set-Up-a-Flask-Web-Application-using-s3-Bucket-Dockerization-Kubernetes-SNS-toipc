@@ -11,8 +11,8 @@ def index():
 @app.route('/upload', methods=['POST'])
 def upload():
     file = request.files['file']
-    s3 = boto3.client('s3', aws_access_key_id='AKIAVO65JMEOXWWT6E4Y', aws_secret_access_key='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')
-    s3.upload_fileobj(file, 'akashbkochure123', file.filename)
+    s3 = boto3.client('s3', aws_access_key_id='', aws_secret_access_key='')
+    s3.upload_fileobj(file, '', file.filename)
     return 'File uploaded successfully!'
 
 if __name__ == '__main__':
