@@ -19,3 +19,8 @@ spec:
         - containerPort: 5000
       imagePullSecrets:
       - name: my-docker-credentials
+
+===========================================================
+===========================================================
+
+kubectl apply -f flask-s3-app-deployment.yaml
