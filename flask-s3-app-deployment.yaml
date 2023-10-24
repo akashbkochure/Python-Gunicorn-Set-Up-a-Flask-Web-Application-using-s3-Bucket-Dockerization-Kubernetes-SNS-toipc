@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: flask-s3-app-container
-        image: flask-s3-app:latest
+        image: localhost:5000/flask-s3-app:latest
         ports:
         - containerPort: 5000
