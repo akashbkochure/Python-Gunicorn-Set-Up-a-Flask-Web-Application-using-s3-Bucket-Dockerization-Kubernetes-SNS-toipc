@@ -1,0 +1,22 @@
+{
+ "Version": "2008-10-17",
+ "Id": "example-ID",
+ "Statement": [
+  {
+   "Sid": "s3-event-notifier",
+   "Effect": "Allow",
+   "Principal": {
+     "Service": "s3.amazonaws.com"
+   },
+   "Action": [
+    "SNS:Publish"
+   ],
+   "Resource": "arn:aws:sns:us-east-1:375736852765:S3FileUploadTopic",
+   "Condition": {
+      "ArnLike": {          
+      "aws:SourceArn": "arn:aws:s3:*:*:akashbkochure123"
+    }
+   }
+  }
+ ]
+}
