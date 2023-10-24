@@ -11,3 +11,14 @@ spec:
       nodePort: 31200
       targetPort: 5000
   type: NodePort
+
+==============================================
+==============================================
+
+kubectl apply -f flask-s3-app-service.yaml
+
+nohup kubectl port-forward svc/flask-s3-app-service 5000:5000 --address 0.0.0.0 > port-forward.log 2>&1 &
+
+or 
+
+kubectl port-forward svc/flask-s3-app-service 5000:5000 --address 0.0.0.0 > port-forward.log 2>&1 & disown
