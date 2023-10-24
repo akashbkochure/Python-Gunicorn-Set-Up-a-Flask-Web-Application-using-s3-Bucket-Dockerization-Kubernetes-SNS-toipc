@@ -7,6 +7,7 @@ spec:
     app: flask-s3-app
   ports:
     - protocol: TCP
-      port: 80
+      port: 5000
+      nodePort: 31200
       targetPort: 5000
   type: NodePort
